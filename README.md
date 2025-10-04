@@ -108,6 +108,79 @@ Ctrl+Shift+S
 
 
 
+## 一键部署指南
+
+### Netlify 部署
+
+1. 访问 [Netlify](https://netlify.com) 并登录你的账号
+2. 点击 "New site from Git"
+3. 选择 "GitHub" 并授权访问你的仓库
+4. 搜索并选择 `kugeceo/pixzens.luhui.net` 仓库
+5. 配置部署设置：
+   - 构建命令：`npm run build`（如项目需要）
+   - 发布目录：`dist`（根据实际项目输出目录调整）
+6. 点击 "Deploy site" 完成部署
+
+### Vercel 部署
+
+1. 访问 [Vercel](https://vercel.com) 并登录你的账号
+2. 点击 "New Project"
+3. 导入 `kugeceo/pixzens.luhui.net` 仓库
+4. 配置项目设置（通常保持默认即可）：
+   - 框架预设：根据项目类型选择（如 React、Vue 等）
+   - 构建命令：`npm run build`（如项目需要）
+   - 输出目录：`dist`（根据实际项目输出目录调整）
+5. 点击 "Deploy" 完成部署
+
+### GitHub Pages 部署
+
+1. 克隆仓库到本地：
+   ```bash
+   git clone https://github.com/kugeceo/pixzens.luhui.net.git
+   cd pixzens.luhui.net
+   ```
+
+2. 安装依赖并构建（如项目需要）：
+   ```bash
+   npm install
+   npm run build
+   ```
+
+3. 将构建产物推送到 `gh-pages` 分支：
+   ```bash
+   # 安装 gh-pages 工具（如未安装）
+   npm install -g gh-pages
+   
+   # 部署
+   gh-pages -d dist  # dist 为构建输出目录
+   ```
+
+4. 在 GitHub 仓库设置中，找到 "Pages" 选项：
+   - 选择 `gh-pages` 分支作为源
+   - 点击 "Save" 保存设置
+   - 部署完成后可通过 `https://<username>.github.io/pixzens.luhui.net` 访问
+
+### Cloudflare Pages 部署
+
+1. 访问 [Cloudflare Pages](https://pages.cloudflare.com/) 并登录你的账号
+2. 点击 "Create a project" 并选择 "Connect to Git"
+3. 授权连接 GitHub 并选择 `kugeceo/pixzens.luhui.net` 仓库
+4. 配置构建设置：
+   - 生产分支：`main` 或 `master`
+   - 构建命令：`npm run build`（如项目需要）
+   - 构建输出目录：`dist`（根据实际项目输出目录调整）
+5. 点击 "Save and Deploy" 开始部署
+6. 部署完成后可通过分配的 `.pages.dev` 域名访问，也可绑定自定义域名
+
+## 使用指南
+
+- 访问 [使用指南（中文）](http://pixzens.luhui.net/guide-zh)
+- 访问 [User Guide（English）](http://pixzens.luhui.net/guide-en)
+
+## API 文档
+
+- [API 文档（中文）](http://pixzens.luhui.net/api-docs-zh)
+- [API Documentation（English）](http://pixzens.luhui.net/api-docs-en)
 
 
 
@@ -130,5 +203,16 @@ Ctrl+Shift+S
 ①  支付服务器、域名费用。
 ②  开发更丰富的功能，设计更友好的用户界面。
 ③  撰写发布更多文章，保证作者的官网一直免费为大家提供服务。
+
+
+## 许可证
+
+本项目采用 [MIT](LICENSE) 许可证开源。
+
+
+
+
+
+
 
 
